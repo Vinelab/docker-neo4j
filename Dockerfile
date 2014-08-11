@@ -3,6 +3,7 @@ MAINTAINER Abed Halawi <abed.halawi@vinelab.com>
 
 # Install openjdk 1.7.0
 RUN yum install -y java-1.7.0-openjdk
+RUN yum install -y tar
 
 # Install Neo4j 2.1.2 in /var/lib/neo4j
 RUN mkdir /var/lib/neo4j
