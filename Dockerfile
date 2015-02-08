@@ -5,11 +5,11 @@ MAINTAINER Abed Halawi <abed.halawi@vinelab.com>
 RUN yum install -y java-1.7.0-openjdk
 RUN yum install -y tar
 
-# Install Neo4j 2.1.2 in /var/lib/neo4j
+# Install Neo4j 2.1.7 in /var/lib/neo4j
 RUN mkdir /var/lib/neo4j
-RUN wget http://dist.neo4j.org/neo4j-community-2.1.2-unix.tar.gz
-RUN tar zxf neo4j-community-2.1.2-unix.tar.gz
-RUN cp -r neo4j-community-2.1.2/* /var/lib/neo4j
+RUN wget http://dist.neo4j.org/neo4j-community-2.1.7-unix.tar.gz
+RUN tar zxf neo4j-community-2.1.7-unix.tar.gz
+RUN cp -r neo4j-community-2.1.7/* /var/lib/neo4j
 RUN export NEO4J_HOME=/var/lib/neo4j
 
 ## turn on indexing: http://chrislarson.me/blog/install-neo4j-graph-database-ubuntu
@@ -26,8 +26,8 @@ RUN chmod +x /launch.sh
 
 # clean sources
 RUN yum clean all
-RUN rm neo4j-community-2.1.2-unix.tar.gz
-RUN rm -rf neo4j-community-2.1.2
+RUN rm neo4j-community-2.1.7-unix.tar.gz
+RUN rm -rf neo4j-community-2.1.7
 
 # Entrypoint
 CMD ["/bin/bash", "-c", "/launch.sh"]
