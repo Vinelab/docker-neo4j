@@ -1,7 +1,7 @@
 FROM vinelab/base
 MAINTAINER Abed Halawi <abed.halawi@vinelab.com>
 
-ENV NEO4J_VERSION 2.1.8
+ENV NEO4J_VERSION 2.2.1
 
 # Install openjdk 1.7.0
 RUN yum install -y java-1.7.0-openjdk
